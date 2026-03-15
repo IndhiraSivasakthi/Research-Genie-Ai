@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: research-genie-ai
+    runtime: java
+    buildCommand: ./mvnw clean package
+    startCommand: java -jar target/*.jar
