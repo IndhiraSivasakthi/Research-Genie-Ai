@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Research Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Research Assistant</h1>
+    <p class="subtitle">Summarize • Generate Bullet Points • Get Suggestions</p>
+
+    <textarea id="content" placeholder="Paste your research text here..."></textarea>
+
+    <div class="controls">
+
+        <select id="operation">
+            <option value="summarize">Summarize</option>
+            <option value="points">Bullet Points</option>
+            <option value="suggest">Suggestions</option>
+        </select>
+
+        <button onclick="sendRequest()">Generate</button>
+
+    </div>
+
+    <div class="loader" id="loader"></div>
+
+    <div class="result-card">
+
+        <h3>AI Result</h3>
+        <div id="result"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

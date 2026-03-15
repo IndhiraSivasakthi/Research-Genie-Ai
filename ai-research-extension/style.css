@@ -1,0 +1,233 @@
+/* Sidebar Container */
+
+#ai-sidebar{
+position:fixed;
+right:0;
+top:0;
+width:380px;
+height:100%;
+background:linear-gradient(180deg,#f8f9ff,#eef2ff);
+border-left:2px solid #e1e5f0;
+z-index:999999;
+font-family:'Segoe UI',Arial, Helvetica, sans-serif;
+padding:16px;
+box-shadow:-6px 0 18px rgba(0,0,0,0.15);
+display:flex;
+flex-direction:column;
+transition:all 0.3s ease;
+}
+
+
+/* Header */
+
+.ai-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-weight:600;
+font-size:20px;
+margin-bottom:12px;
+padding-bottom:6px;
+border-bottom:1px solid #e4e6f1;
+color:#222;
+}
+
+
+/* Close Button */
+
+#ai-close{
+background:linear-gradient(45deg,#ff4d4d,#ff7676);
+color:white;
+border:none;
+padding:6px 12px;
+cursor:pointer;
+border-radius:6px;
+font-size:12px;
+transition:0.3s;
+}
+
+#ai-close:hover{
+transform:scale(1.05);
+box-shadow:0 2px 8px rgba(255,0,0,0.3);
+}
+
+
+/* Text Area */
+
+#ai-text{
+width:100%;
+height:120px;
+padding:10px;
+border-radius:8px;
+border:1px solid #d6d9f0;
+margin-bottom:12px;
+resize:none;
+font-size:14px;
+background:white !important;
+color:black !important;
+box-shadow:inset 0 1px 3px rgba(0,0,0,0.1);
+transition:0.2s;
+}
+
+#ai-text:focus{
+outline:none;
+border-color:#4a6cf7;
+box-shadow:0 0 5px rgba(74,108,247,0.3);
+}
+
+
+/* Buttons */
+
+.ai-buttons{
+display:flex;
+gap:6px;
+margin-bottom:12px;
+}
+
+.ai-buttons button{
+flex:1;
+padding:9px;
+background:linear-gradient(135deg,#4a6cf7,#6a8bff);
+color:white;
+border:none;
+cursor:pointer;
+border-radius:6px;
+font-size:13px;
+font-weight:500;
+transition:all 0.2s ease;
+}
+
+.ai-buttons button:hover{
+transform:translateY(-2px);
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
+background:linear-gradient(135deg,#3655d4,#5c7aff);
+}
+
+
+/* Result Area */
+
+#ai-result{
+margin-top:10px;
+background:white !important;
+color:black !important;
+border-radius:8px;
+padding:12px;
+border:1px solid #e1e4f0;
+flex-grow:1;
+overflow-y:auto;
+overflow-x:hidden;
+font-size:14px;
+line-height:1.6;
+max-height:450px;
+word-wrap:break-word;
+white-space:normal;
+box-shadow:0 1px 6px rgba(0,0,0,0.08);
+}
+
+
+/* Bullet Points */
+
+#ai-result ul{
+padding-left:18px;
+}
+
+#ai-result li{
+margin-bottom:6px;
+}
+
+
+/* Bold Text */
+
+#ai-result b{
+color:#222;
+}
+
+
+/* Scrollbar */
+
+#ai-result::-webkit-scrollbar{
+width:7px;
+}
+
+#ai-result::-webkit-scrollbar-track{
+background:#f0f2fa;
+border-radius:10px;
+}
+
+#ai-result::-webkit-scrollbar-thumb{
+background:linear-gradient(#8ea2ff,#4a6cf7);
+border-radius:10px;
+}
+
+
+/* Loading Animation */
+
+.loading{
+display:flex;
+align-items:center;
+gap:6px;
+font-size:14px;
+}
+
+.loading::after{
+content:"...";
+animation:dots 1.5s infinite;
+}
+
+@keyframes dots{
+0%{content:".";}
+50%{content:"..";}
+100%{content:"...";}
+}
+#ai-result{
+    max-height:400px;
+    overflow-y:auto;
+    padding-right:5px;
+}
+/* Action Buttons (Copy + Download) */
+
+.ai-actions{
+display:flex;
+gap:8px;
+margin-bottom:10px;
+}
+
+.ai-actions button{
+flex:1;
+padding:8px;
+background:linear-gradient(135deg,#22c55e,#16a34a);
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:13px;
+font-weight:500;
+transition:all 0.25s ease;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Hover Effect */
+
+.ai-actions button:hover{
+transform:translateY(-2px);
+box-shadow:0 4px 12px rgba(0,0,0,0.25);
+background:linear-gradient(135deg,#16a34a,#15803d);
+}
+
+/* Copy Button Color */
+
+#copyResult{
+background:linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+/* Download Button Color */
+
+#downloadResult{
+background:linear-gradient(135deg,#f59e0b,#d97706);
+}
+
+#downloadResult:hover{
+background:linear-gradient(135deg,#d97706,#b45309);
+}
+
+
