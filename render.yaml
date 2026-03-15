@@ -1,7 +1,6 @@
 services:
   - type: web
     name: research-genie-ai
-    env: java
     plan: free
     buildCommand: mvn clean package
     startCommand: java -jar target/*.jar
