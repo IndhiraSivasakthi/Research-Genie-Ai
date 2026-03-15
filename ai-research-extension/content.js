@@ -148,6 +148,7 @@ function downloadResult() {
     a.href = url;
     a.download = "AI_Research_Result.txt";
 
+
     document.body.appendChild(a);
     a.click();
 
