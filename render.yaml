@@ -1,7 +1,7 @@
 services:
   - type: web
     name: research-genie-ai
+    env: java
     plan: free
-    env: docker
     buildCommand: mvn clean package
     startCommand: java -jar target/*.jar
