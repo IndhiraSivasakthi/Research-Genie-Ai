@@ -276,3 +276,10 @@ function formatOutput(text, operation) {
     // ---------- SUMMARY ----------
     return `<p style="text-align:justify;">${text}</p>`;
 }
+
+git init
+git add .
+git commit -m "AI Research API"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/ai-research-api.git
+git push -u origin main
