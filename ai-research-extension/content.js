@@ -276,7 +276,6 @@ function formatOutput(text, operation) {
     // ---------- SUMMARY ----------
     return `<p style="text-align:justify;">${text}</p>`;
 }
-
 git init
 git add .
 git commit -m "AI Research API"
