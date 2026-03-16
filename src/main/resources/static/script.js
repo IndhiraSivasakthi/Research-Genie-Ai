@@ -123,19 +123,36 @@ function formatAIResult(text, operation) {
 async function copyResult() {
     const result = document.getElementById("result");
     const text = result.innerText || result.textContent;
+    
     try {
         await navigator.clipboard.writeText(text);
-        showToast("Copied to clipboard! 📋", "success");
+        alert("✅ Copied to clipboard successfully!");
     } catch (err) {
+        // Fallback for older browsers
         const textArea = document.createElement("textarea");
         textArea.value = text;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-999999px";
+        textArea.style.top = "-999999px";
         document.body.appendChild(textArea);
+        textArea.focus();
         textArea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textArea);
-        showToast("Copied! 📋", "success");
+        
+        try {
+            const successful = document.execCommand('copy');
+            document.body.removeChild(textArea);
+            if (successful) {
+                alert("✅ Copied to clipboard!");
+            } else {
+                alert("⚠️ Failed to copy. Please select and copy manually.");
+            }
+        } catch (fallbackErr) {
+            document.body.removeChild(textArea);
+            alert("❌ Copy failed. Please select text manually.");
+        }
     }
 }
+
 
 function downloadResult() {
     const result = document.getElementById("result");
@@ -170,23 +187,30 @@ async function shareResult() {
     }
 }
 
-function showToast(message, type = 'info') {
-    const toast = document.createElement('div');
-    toast.className = `toast toast-${type}`;
-    toast.textContent = message;
-    document.body.appendChild(toast);
-
-    setTimeout(() => {
-        toast.style.opacity = '1';
-        toast.style.transform = 'translateX(0)';
-    }, 100);
-
-    setTimeout(() => {
-        toast.style.opacity = '0';
-        toast.style.transform = 'translateX(100%)';
-        setTimeout(() => document.body.removeChild(toast), 300);
-    }, 3000);
+async function downloadResult() {
+    const result = document.getElementById("result");
+    const text = result.innerText || result.textContent;
+    const operation = document.getElementById("operation").options[document.getElementById("operation").selectedIndex].text;
+    
+    // Create filename
+    const filename = `ResearchGenie_${operation.replace(/\s+/g, '_')}_${new Date().toISOString().slice(0,10)}.txt`;
+    
+    // Create and trigger download
+    const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    // ✅ ALERT + TOAST - Double confirmation
+    alert(`✅ Downloaded!\n\n📄 File: ${filename}\n💾 Saved to Downloads folder`);
+    showToast("Downloaded successfully! 💾", "success");
 }
+
 
 // Toast styles
 if (!document.querySelector('style[data-toast]')) {
