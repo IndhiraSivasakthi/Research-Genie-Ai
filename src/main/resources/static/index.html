@@ -1,43 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>AI Research Assistant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Genie AI - Next Gen</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
+<div class="gradient-bg">
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+</div>
 
 <div class="container">
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-magic"></i>
+                <h1>Research Genie AI</h1>
+            </div>
+            <p class="subtitle">Next-Gen AI Assistant for Research Excellence</p>
+        </div>
+    </header>
 
-    <h1>AI Research Assistant</h1>
-    <p class="subtitle">Summarize • Generate Bullet Points • Get Suggestions</p>
+    <section class="input-section">
+        <div class="input-card glassmorphism">
+            <div class="input-header">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Paste your research content</span>
+            </div>
+            <textarea id="content" placeholder="Paste your research text, articles, or notes here... AI will analyze and transform it instantly."></textarea>
 
-    <textarea id="content" placeholder="Paste your research text here..."></textarea>
+            <div class="controls">
+                <div class="control-group">
+                    <select id="operation">
+                        <option value="summarize">✨ Summarize</option>
+                        <option value="points">📋 Bullet Points</option>
+                        <option value="suggest">💡 Smart Suggestions</option>
+                    </select>
+                    <button id="generateBtn" onclick="sendRequest()">
+                        <span class="btn-text">Generate</span>
+                        <div class="btn-loader"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="loader-container" id="loader">
+            <div class="pulse-loader">
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring"></div>
+                <i class="fas fa-magic"></i>
+            </div>
+            <p>AI is processing your content...</p>
+        </div>
+    </section>
 
-    <div class="controls">
-
-        <select id="operation">
-            <option value="summarize">Summarize</option>
-            <option value="points">Bullet Points</option>
-            <option value="suggest">Suggestions</option>
-        </select>
-
-        <button onclick="sendRequest()">Generate</button>
-
-    </div>
-
-    <div class="loader" id="loader"></div>
-
-    <div class="result-card">
-
-        <h3>AI Result</h3>
-        <div id="result"></div>
-
-    </div>
-
+    <section class="result-section">
+        <!-- ✅ RESULT HIDDEN INITIALLY -->
+        <div class="result-card glassmorphism" id="resultCard" style="display: none;">
+            <div class="result-header">
+                <div class="result-info">
+                    <i class="fas fa-rocket"></i>
+                    <h3>AI Generation Complete</h3>
+                </div>
+                <div class="result-actions">
+                    <button class="action-btn copy-btn" onclick="copyResult()" title="Copy to clipboard">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                    <button class="action-btn download-btn" onclick="downloadResult()" title="Download as TXT">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <button class="action-btn share-btn" onclick="shareResult()" title="Share">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="result" class="result-content"></div>
+        </div>
+    </section>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
