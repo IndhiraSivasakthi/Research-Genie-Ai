@@ -119,6 +119,15 @@ Enter text → Submit → AI Processing → Result
 * Docker
 * Render (Cloud Hosting)
 
+## Tools
+
+* IntelliJ
+* VS Code
+* Chrome Browser
+* Postman
+* Github
+* Github Desktop
+  
 ---
 
 # 📁 Project Structure
