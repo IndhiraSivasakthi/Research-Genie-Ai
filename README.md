@@ -216,16 +216,6 @@ docker run -p 8080:8080 researchgenie-ai
 3. Click "Create API Key"
 4. Copy the generated API key
 ```
----
-
-# ☁️ Deployment (Render)
-
-1. Push code to GitHub
-2. Create Web Service on Render
-3. Connect repository
-4. Use Docker deployment
-5. Add environment variables
-
 # ⚙️ Add API Key to Project
 
 🔹 Option 1: Environment Variable (Recommended)
@@ -238,11 +228,13 @@ gemini.api.key=your_api_key_here
 ```
 ---
 
-# 🔐 Environment Variables
+# ☁️ Deployment (Render)
 
-```
-GEMINI_API_KEY=your_api_key_here
-```
+1. Push code to GitHub
+2. Create Web Service on Render
+3. Connect repository
+4. Use Docker deployment
+5. Add environment variables
 
 ---
 
