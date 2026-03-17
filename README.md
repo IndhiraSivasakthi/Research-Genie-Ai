@@ -204,6 +204,20 @@ docker run -p 8080:8080 researchgenie-ai
 
 ---
 
+# 🔑 Gemini API Key Setup
+
+* To use AI features in ResearchGenie AI, you need a Gemini API key.
+
+# 📌 Steps to Get API Key
+
+```
+1. Go to 👉 https://aistudio.google.com/app/apikey
+2. Sign in with your Google account
+3. Click "Create API Key"
+4. Copy the generated API key
+```
+---
+
 # ☁️ Deployment (Render)
 
 1. Push code to GitHub
@@ -212,6 +226,16 @@ docker run -p 8080:8080 researchgenie-ai
 4. Use Docker deployment
 5. Add environment variables
 
+# ⚙️ Add API Key to Project
+
+🔹 Option 1: Environment Variable (Recommended)
+```
+GEMINI_API_KEY=your_api_key_here
+```
+🔹 Option 2: application.properties
+```
+gemini.api.key=your_api_key_here
+```
 ---
 
 # 🔐 Environment Variables
