@@ -13,8 +13,7 @@ It consists of:
 # 🚀 Live Demo
 
 🌐 **Web App:**
-https://your-live-url.onrender.com
-
+https://research-genie-ai.onrender.com/
 🔗 **Backend API:**
 http://localhost:8080/index.html
 
