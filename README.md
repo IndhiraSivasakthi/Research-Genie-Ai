@@ -16,7 +16,7 @@ It consists of:
 https://your-live-url.onrender.com
 
 🔗 **Backend API:**
-https://your-api-url.onrender.com/api/research/process
+http://localhost:8080/index.html
 
 ---
 
@@ -133,11 +133,20 @@ researchgenie-ai/
 │   ├── manifest.json
 │
 ├── src/main/java/com/researchgenie/ai/
-│   ├── config/
-│   ├── controller/
-│   ├── dto/
-│   ├── service/
-│
+|       |       ├── config/
+│       │       │   ├── CorsConfig.java
+│       │       │   └── WebClientConfig.java
+│       │       │
+│       │       ├── controller/
+│       │       │   └── ResearchController.java
+│       │       │
+│       │       ├── dto/
+│       │       │   ├── GeminiResponse.java
+│       │       │   └── ResearchRequest.java
+│       │       │
+│       │       └── service/
+│       │           └── ResearchService.java
+│       │
 ├── src/main/resources/
 │   ├── static/
 │   │   ├── index.html
@@ -229,11 +238,6 @@ GEMINI_API_KEY=your_api_key_here
 * Improve productivity
 * Extract meaningful insights quickly
 
----
-
-# 🎯 Interview Explanation
-
-> I developed a full-stack AI-powered Chrome extension called ResearchGenie AI. It allows users to analyze selected text from any webpage using features like summarization, bullet points, and smart suggestions. I built the backend using Spring Boot and integrated AI using Gemini API. The system is deployed using Docker on Render and also includes a web app version for manual input.
 
 ---
 
