@@ -9,6 +9,11 @@ It consists of:
 * A **Spring Boot Backend API** deployed live using Docker
 
 ---
+## 🖥️ Web App Screenshot
+<p align="center">
+<img src="Screenshot/web-ui.png" alt="ResearchGenie AI Web App" width="700"/>
+</p>
+---
 
 # 🚀 Live Demo
 
