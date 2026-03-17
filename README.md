@@ -122,7 +122,6 @@ Enter text → Submit → AI Processing → Result
 ## Tools
 
 * IntelliJ
-* VS Code
 * Chrome Browser
 * Postman
 * Github
