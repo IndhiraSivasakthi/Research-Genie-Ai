@@ -250,29 +250,28 @@ gemini.api.key=your_api_key_here
 
 ---
 
-# 🚀 Advantages of ResearchGenie AI
+# 🌟 Project Highlights
 
-** ⚡ Saves Time ** 
-* Quickly converts long articles into summaries and key points.
+- **⚡ Saves Time**  
+  Quickly converts long articles into summaries and key points.
 
-** 🧠 Improves Understanding ** 
-* Helps users grasp complex topics easily with structured output.
+- **🧠 Improves Understanding**  
+  Helps users grasp complex topics easily with structured output.
 
-**  🌐 Works on Any Website ** 
-* Chrome extension allows usage across blogs, research papers, and news sites.
+- **🌐 Works on Any Website**  
+  Chrome Extension allows usage across blogs, research papers, and news sites.
 
-**  🔄 Dual Usage (Extension + Web App) ** 
-* Can be used both as a browser extension and a standalone web application.
+- **🔄 Dual Usage (Extension + Web App)**  
+  Can be used both as a browser extension and a standalone web application.
 
-**  📋 Easy Content Reuse ** 
-* Copy and download features make it useful for notes, assignments, and documentation.
+- **📋 Easy Content Reuse**  
+  Copy and download features make it useful for notes, assignments, and documentation.
 
-**  🧩 Modular Architecture ** 
-* Clean separation of frontend, backend, and AI service makes it scalable and maintainable.
+- **🧩 Modular Architecture**  
+  Clean separation of frontend, backend, and AI service makes it scalable and maintainable.
 
-**  ☁️ Cloud Deployed ** 
-* Hosted using Docker on Render, making it accessible from anywhere.
-
+- **☁️ Cloud Deployed**  
+  Hosted using Docker on Render, making it accessible from anywhere.
 
 ---
 
