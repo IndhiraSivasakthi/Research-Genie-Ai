@@ -244,12 +244,7 @@ You can deploy **ResearchGenie AI** to the cloud using Render for easy access fr
 
 3. **Configure Service Settings**  
    - Select **Docker** as the deployment method  
-   - Choose the **branch** you want to deploy  
-   - Set **Build Command**: `docker build -t researchgenie-ai .`  
-   - Set **Start Command**:  
-     ```bash
-     docker run -p 8080:8080 -e GEMINI_API_KEY=$GEMINI_API_KEY researchgenie-ai
-     ```
+   - Choose the **branch** you want to deploy (ex:main)
 
 4. **Add Environment Variables**  
    - Add the required API key:  
