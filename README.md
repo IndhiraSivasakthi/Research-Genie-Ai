@@ -14,6 +14,7 @@ It consists of:
 
 🌐 **Web App:**
 https://research-genie-ai.onrender.com/
+
 🔗 **Backend API:**
 http://localhost:8080/index.html
 
