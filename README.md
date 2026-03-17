@@ -228,13 +228,46 @@ gemini.api.key=your_api_key_here
 ```
 ---
 
-# ☁️ Deployment (Render)
+# ☁️ Deployment on Render
 
-1. Push code to GitHub
-2. Create Web Service on Render
-3. Connect repository
-4. Use Docker deployment
-5. Add environment variables
+You can deploy **ResearchGenie AI** to the cloud using Render for easy access from anywhere.
+
+## Steps to Deploy
+
+1. **Push Your Code to GitHub**  
+   Make sure your project is committed and pushed to a public or private GitHub repository.
+
+2. **Create a New Web Service on Render**  
+   - Go to [Render Dashboard](https://render.com/)  
+   - Click **“New” → “Web Service”**  
+   - Choose your GitHub repository  
+
+3. **Configure Service Settings**  
+   - Select **Docker** as the deployment method  
+   - Choose the **branch** you want to deploy  
+   - Set **Build Command**: `docker build -t researchgenie-ai .`  
+   - Set **Start Command**:  
+     ```bash
+     docker run -p 8080:8080 -e GEMINI_API_KEY=$GEMINI_API_KEY researchgenie-ai
+     ```
+
+4. **Add Environment Variables**  
+   - Add the required API key:  
+     | Key             | Value                     |
+     |-----------------|---------------------------|
+     | `GEMINI_API_KEY` | your_api_key_here        |  
+   - This ensures the backend can communicate with Gemini AI securely.
+
+5. **Deploy & Verify**  
+   - Click **“Create Web Service”**  
+   - Wait for Render to build and start the container  
+   - Open the live URL provided by Render to access your app
+
+## ✅ Tips
+
+- Always keep your **API keys secret**.  
+- If you update code, Render can **auto-deploy** new changes from GitHub.  
+- Use **Docker logs** in Render to debug any deployment issues.
 
 ---
 
